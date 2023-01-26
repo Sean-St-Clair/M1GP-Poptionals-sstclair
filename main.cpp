@@ -73,8 +73,9 @@ int main() {
 
     /* 3. Use ASCII art to draw in the comments what the following code looks like in memory:
      *      Stack           Heap
-     *
-     *
+     *       __              __  __  __  __  __  __  __  __  __
+     *      |  | ---------> |11||22||33||44||55||66||77||88||99|
+     *      |__|            |__||__||__||__||__||__||__||__||__|
      *
      */
     unique_ptr<vector<int>> heapVec = make_unique<vector<int>>();
