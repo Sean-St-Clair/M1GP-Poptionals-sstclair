@@ -39,6 +39,8 @@ int main() {
     optional<int> optInt1 = nullopt;
     optional<int> optInt2 = make_optional<int>(42);
     vector<optional<int>> optVec;
+
+    // Adding 8 int optionals to optVec
     optVec.push_back(nullopt);
     optVec.push_back(make_optional<int>(90));
     optVec.push_back(make_optional<int>(44));
@@ -64,9 +66,10 @@ int main() {
      *      |  | ---------> |yo|
      *      |__|            |__|
      */
-
-
-
+    unique_ptr<int> smartIntPtr = make_unique<int>(11);
+    unique_ptr<double> smartDoublePtr = make_unique<double>(0.3);
+    unique_ptr<char> smartCharPtr = make_unique<char>('d');
+    unique_ptr<string> smartStringPtr = make_unique<string>("yo");
 
     /* 3. Use ASCII art to draw in the comments what the following code looks like in memory:
      *      Stack           Heap
