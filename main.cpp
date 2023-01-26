@@ -104,9 +104,8 @@ int main() {
      *      |  | /
      *      |__|
      */
-
-
-
+    shared_ptr<int> sharedIntPtr = make_shared<int>();
+    shared_ptr<int> sharedIntPtrCopy = sharedIntPtr;
 
     /* 6. Use ASCII art to draw in the comments what the following code looks like in memory:
      *      Stack      Heap
