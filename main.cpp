@@ -3,6 +3,7 @@
 #include <optional>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 /*
@@ -35,9 +36,17 @@ int main() {
      *      |  |90|44|  |79|  |-5|17|
      *      |__|__|__|__|__|__|__|__|
      */
-
-
-
+    optional<int> optInt1 = nullopt;
+    optional<int> optInt2 = make_optional<int>(42);
+    vector<optional<int>> optVec;
+    optVec.push_back(nullopt);
+    optVec.push_back(make_optional<int>(90));
+    optVec.push_back(make_optional<int>(44));
+    optVec.push_back(nullopt);
+    optVec.push_back(make_optional<int>(79));
+    optVec.push_back(nullopt);
+    optVec.push_back(make_optional<int>(-5));
+    optVec.push_back(make_optional<int>(17));
 
     /* 2. Create the following smart pointers,
      *    where each one points to a different data type:
