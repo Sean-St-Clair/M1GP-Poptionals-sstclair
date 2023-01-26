@@ -120,7 +120,6 @@ int main() {
      *      |  | ---------> |98|
      *      |__|            |__|
      *
-     *
      */
     optional<unique_ptr<int>> opIntPtr1 = nullopt;
     optional<unique_ptr<int>> opIntPtr2 = make_optional<unique_ptr<int>>(nullptr);
@@ -140,9 +139,9 @@ int main() {
      *      |  | ----> |hi|
      *      |__|       |__|
      */
-
-
-
+    unique_ptr<optional<string>> ptrToOpt1 = nullptr;
+    unique_ptr<optional<string>> ptrToOpt2 = make_unique<optional<string>>(nullopt);
+    unique_ptr<optional<string>> ptrToOpt3 = make_unique<optional<string>>("hi");
 
     return 0;
 }
