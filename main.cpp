@@ -23,7 +23,6 @@ using namespace std;
  *  An arrow with a bar represents a nullptr: -->|
  */
 
-
 int main() {
     /* 1. Create the following three optional integers:
      *      ?__
@@ -108,23 +107,24 @@ int main() {
     shared_ptr<int> sharedIntPtrCopy = sharedIntPtr;
 
     /* 6. Use ASCII art to draw in the comments what the following code looks like in memory:
-     *      Stack      Heap
+     *      Stack           Heap
+     *      ?__
+     *      |  |
+     *      |__|
      *
+     *      ?__
+     *      |  | --------->|
+     *      |__|
      *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
+     *      ?__              __
+     *      |  | ---------> |98|
+     *      |__|            |__|
      *
      *
      */
     optional<unique_ptr<int>> opIntPtr1 = nullopt;
     optional<unique_ptr<int>> opIntPtr2 = make_optional<unique_ptr<int>>(nullptr);
     optional<unique_ptr<int>> opIntPtr3 = make_optional<unique_ptr<int>>(make_unique<int>(98));
-
 
     /* 7. Create the following smart pointers to optionals:
      *      Stack      Heap
