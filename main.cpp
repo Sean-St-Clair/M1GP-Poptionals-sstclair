@@ -83,21 +83,16 @@ int main() {
         heapVec->push_back(n);
     }
 
-
     /* 4. Use ASCII art to draw in the comments what the following code looks like in memory:
-     *      Stack      Heap
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
+     *      Stack           Heap
+     *       __              __              __
+     *      |  | ---------> |  | ---------> |m |
+     *      |__|            |__|            |__|
+     *                                       ^
+     * (in class we may have put the pointer arrow down here rather than off to the side, but this is still heap memory)
      */
     unique_ptr<unique_ptr<char>> heapPtrChar = make_unique<unique_ptr<char>>();
     *heapPtrChar = make_unique<char>('m');
-
 
     /* 5. Create the following smart pointers to your choice of data type:
      *      Stack      Heap
